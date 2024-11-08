@@ -36,7 +36,6 @@ export const ProductsTable: React.FC<ProductsTableProps> = ({ data, isLoading })
   const deleteItem = useMutationProductsDelete();
   const isMobile = useMediaQuery('(max-width:600px)', { noSsr: true });
 
-  console.log('data', data)
 
   //
   const doDeleteItem = (item: ApiProduct) => {
@@ -74,8 +73,9 @@ export const ProductsTable: React.FC<ProductsTableProps> = ({ data, isLoading })
                 <CardMedia
                   component="img"
                   height="140"
-                  image={product.image || '/placeholder.png'}
+                  image={product.image || '/images/default-product-image.png'}
                   alt={product.title.en || product.title.ar}
+                  sx={{ objectFit: 'contain' }}
                 />
                 <CardContent>
                   <Typography variant="h5">{product.title.en || product.title.ar}</Typography>
