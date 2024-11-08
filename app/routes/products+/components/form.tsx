@@ -6,6 +6,7 @@ import {useQueryCategoriesList} from '~/services/categories';
 
 import {AppInput} from '~/global/components/app-input';
 import {AppInputSwitch} from '~/global/components/app-input-switch';
+import React from "react";
 
 //
 //

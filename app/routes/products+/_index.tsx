@@ -10,6 +10,7 @@ import {SkeletonOnLoading} from '~/global/components/skeleton-on-loading';
 import {AppButton} from '~/global/components/app-button';
 
 import {ProductsTable} from './components/table';
+import React from "react";
 
 //
 //

@@ -7,6 +7,7 @@ import {DeleteOutline} from '@mui/icons-material';
 import {AppButton} from '~/global/components/app-button';
 
 import {ApiProduct} from '~/api-client/types';
+import React from "react";
 
 //
 //
