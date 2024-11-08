@@ -1,3 +1,4 @@
+import React from "react";
 import type {MetaFunction} from '@remix-run/node';
 import {redirect} from '@remix-run/react';
 import {useTranslation} from 'react-i18next';
