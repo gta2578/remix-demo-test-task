@@ -3,7 +3,7 @@ import {LinksFunction} from '@remix-run/node';
 //
 //
 
-export const MuiLinks: LinksFunction = () => [
+export const MuiLinks: () => [{ rel: string; href: string }, { rel: string; crossOrigin: string; href: string }, { rel: string; href: string }] = () => [
   // Google Fonts for MUI
   {rel: 'preconnect', href: 'https://fonts.googleapis.com'},
   {

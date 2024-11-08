@@ -1,4 +1,4 @@
-import type {} from '@mui/lab/themeAugmentation';
+
 import {createTheme, colors} from '@mui/material';
 import {grey} from '@mui/material/colors';
 
