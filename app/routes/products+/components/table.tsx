@@ -14,16 +14,15 @@ import {
   useMediaQuery,
   Button, Stack
 } from '@mui/material';
-
+import {DeleteOutline} from "@mui/icons-material";
 import { useMutationProductsDelete } from '~/services/products';
 import { TableRowEmpty } from '~/global/components/table-row-empty';
-
 import { ApiProduct } from '~/api-client/types';
 import { ProductsTableHead } from './table-head';
 import { ProductsTableRow } from './table-row';
 import { ProductsTableRowSkeleton } from './table-row-skeleton';
 import {AppButton} from "~/global/components/app-button";
-import {DeleteOutline} from "@mui/icons-material";
+
 
 interface ProductsTableProps {
   data?: ApiProduct[];

@@ -5,8 +5,7 @@ import {Stack, TableCell, TableCellProps, TableRow, Typography} from '@mui/mater
 
 import {AppButton} from '~/global/components/app-button';
 
-//
-//
+
 
 export const TableRowEmpty = ({
   actionURL,

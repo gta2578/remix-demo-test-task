@@ -1,10 +1,9 @@
 import React from "react";
 import {useTranslation} from 'react-i18next';
-
 import {Box, TableCell, TableHead, TableRow, Typography} from '@mui/material';
 
-//
-//
+
+
 
 export const CategoriesTableHead = () => {
   const {t} = useTranslation(['common']);

@@ -1,8 +1,8 @@
-import {Box, Button, Skeleton, Stack, TableCell, TableRow, Typography} from '@mui/material';
 import React from "react";
+import {Box, Button, Skeleton, Stack, TableCell, TableRow, Typography} from '@mui/material';
 
-//
-//
+
+
 
 export const ProductsTableRowSkeleton = ({count = 3}: {count?: number}) => {
   const rows = [];

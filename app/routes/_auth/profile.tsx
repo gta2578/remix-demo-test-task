@@ -5,16 +5,14 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import {useTranslation} from 'react-i18next';
 import {useSnackbar} from 'notistack';
 import * as yup from 'yup';
-
 import {queryClient} from '~/services/client';
 import {useQueryProfile, useMutationProfileUpdate} from '~/services/auth';
-
 import {PageShell} from '~/global/components/page-shell';
 import {AppInputPassword} from '~/global/components/app-input-password';
 import {AppInput} from '~/global/components/app-input';
 
-//
-//
+
+
 
 export const handle = {i18n: ['common', 'auth']};
 export const meta: MetaFunction = () => [{title: 'Remix App - Profile'}];

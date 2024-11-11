@@ -1,8 +1,7 @@
 import React from "react";
 import {SkeletonProps, Skeleton} from '@mui/material';
 
-//
-//
+
 
 export const SkeletonOnLoading = ({
   isLoading,

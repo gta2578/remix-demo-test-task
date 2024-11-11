@@ -1,7 +1,8 @@
+import React from 'react';
 import { LinkProps } from '@remix-run/react';
 import { Link as MuiLink, LinkProps as MuiLinkProps } from '@mui/material';
 import { I18nLink } from './i18n-link';
-import React from 'react';
+
 
 type MuiAppI18nLinkProps = Omit<LinkProps, 'to'> &
   Omit<MuiLinkProps, 'href'> & {

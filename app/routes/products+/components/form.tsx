@@ -1,15 +1,12 @@
+import React from "react";
 import {useTranslation} from 'react-i18next';
-
 import {Box, Grid2, InputAdornment, MenuItem} from '@mui/material';
-
 import {useQueryCategoriesList} from '~/services/categories';
-
 import {AppInput} from '~/global/components/app-input';
 import {AppInputSwitch} from '~/global/components/app-input-switch';
-import React from "react";
 
-//
-//
+
+
 
 export const ProductsForm = () => {
   const {t} = useTranslation(['common', 'products']);

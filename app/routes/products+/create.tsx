@@ -1,3 +1,4 @@
+import React from "react";
 import type {MetaFunction} from '@remix-run/node';
 import {Form, redirect} from '@remix-run/react';
 import {useForm, FormProvider} from 'react-hook-form';
@@ -9,9 +10,10 @@ import {useMutationProductsCreate} from '~/services/products';
 import {useI18nNavigate} from '~/global/hooks/use-i18n-navigate';
 import {PageShell} from '~/global/components/page-shell';
 import {ProductsForm} from './components/form';
-import React from "react";
-//
-//
+
+
+
+
 export const handle = {i18n: ['common', 'products']};
 export const meta: MetaFunction = () => [{title: 'Remix App - Create a category'}];
 export const clientLoader = async () => {

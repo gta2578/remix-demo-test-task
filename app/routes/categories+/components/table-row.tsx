@@ -1,15 +1,12 @@
 import {useTranslation} from 'react-i18next';
 import {formatRelative} from 'date-fns';
-
 import {Box, Button, Stack, TableCell, TableRow, Typography} from '@mui/material';
 import {DeleteOutline} from '@mui/icons-material';
-
 import {AppButton} from '~/global/components/app-button';
-
 import {ApiCategory} from '~/api-client/types';
 
-//
-//
+
+
 
 type CategoriesTableRowProps = {row: ApiCategory; doDeleteItem: (item: ApiCategory) => void};
 

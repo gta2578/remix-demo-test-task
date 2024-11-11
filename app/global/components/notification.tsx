@@ -1,9 +1,7 @@
 import React from 'react';
-
 import {Alert, AlertProps, Typography, TypographyProps} from '@mui/material';
 
-//
-//
+
 
 export type NotificationProps = {
   heading?: React.ReactNode;

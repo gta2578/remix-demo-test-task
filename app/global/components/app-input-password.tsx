@@ -1,12 +1,8 @@
 import {IconButton, InputAdornment} from '@mui/material';
 import {Visibility, VisibilityOff} from '@mui/icons-material';
-
 import {useToggle} from '~/global/hooks/use-toggle';
-
 import {AppInput, AppInputProps} from './app-input';
 
-//
-//
 
 export const AppInputPassword = (props: AppInputProps) => {
   const toggle = useToggle();

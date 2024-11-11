@@ -1,3 +1,4 @@
+import React from "react";
 import type { MetaFunction } from '@remix-run/node';
 import { Form, redirect } from '@remix-run/react';
 import { useTranslation } from 'react-i18next';
@@ -5,14 +6,13 @@ import { useSnackbar } from 'notistack';
 import * as yup from 'yup';
 import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-
 import { useMutationSignUp } from '~/services/auth';
 import { useI18nNavigate } from '~/global/hooks/use-i18n-navigate';
 import { PageShell } from '~/global/components/page-shell';
 import { AppInputPassword } from '~/global/components/app-input-password';
 import { AppInput } from '~/global/components/app-input';
 import { apiSaveTokens } from '~/api-client/utils/tokens';
-import React from "react";
+
 
 //
 //

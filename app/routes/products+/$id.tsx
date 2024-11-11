@@ -5,14 +5,10 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import {useSnackbar} from 'notistack';
 import * as yup from 'yup';
 import {useTranslation} from 'react-i18next';
-
 import {queryClient} from '~/services/client';
 import {useQueryProductsGet, useMutationProductsUpdate} from '~/services/products';
-
 import {useI18nNavigate} from '~/global/hooks/use-i18n-navigate';
-
 import {PageShell} from '~/global/components/page-shell';
-
 import {ProductsForm} from './components/form';
 
 //

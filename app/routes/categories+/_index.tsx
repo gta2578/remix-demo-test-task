@@ -2,18 +2,13 @@ import React from "react";
 import type {MetaFunction} from '@remix-run/node';
 import {redirect} from '@remix-run/react';
 import {useTranslation} from 'react-i18next';
-
 import {Stack} from '@mui/material';
-
 import {useQueryCategoriesList} from '~/services/categories';
-
 import {SkeletonOnLoading} from '~/global/components/skeleton-on-loading';
 import {AppButton} from '~/global/components/app-button';
-
 import {CategoriesTable} from './components/table';
 
-//
-//
+
 
 export const handle = {i18n: ['common', 'categories']};
 export const meta: MetaFunction = () => [{title: 'Remix App - Categories'}];

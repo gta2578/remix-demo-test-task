@@ -1,10 +1,9 @@
-import {useTranslation} from 'react-i18next';
-
-import {Box, TableCell, TableHead, TableRow, Typography} from '@mui/material';
 import React from "react";
+import {useTranslation} from 'react-i18next';
+import {Box, TableCell, TableHead, TableRow, Typography} from '@mui/material';
 
-//
-//
+
+
 
 export const ProductsTableHead = () => {
   const {t} = useTranslation(['common', 'products']);

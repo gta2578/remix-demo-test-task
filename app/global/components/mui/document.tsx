@@ -2,16 +2,13 @@ import * as React from 'react';
 import {Links, Meta, Scripts, ScrollRestoration, useLoaderData} from '@remix-run/react';
 import {QueryClientProvider} from '@tanstack/react-query';
 import {withEmotionCache} from '@emotion/react';
+import { EmotionCache } from '@emotion/cache';
 import {useChangeLanguage} from 'remix-i18next/react';
 import {closeSnackbar, SnackbarProvider} from 'notistack';
-
 import {Button, GlobalStyles, unstable_useEnhancedEffect as useEnhancedEffect} from '@mui/material';
-
 import {queryClient} from '~/services/client';
-
 import {SnackNotification} from '~/global/components/snack-notification';
 import theme from '~/global/components/mui/theme';
-
 import {EmotionStyleContext} from '~/emotion/style-context';
 import {clientLoader as RootClientLoader} from '~/root';
 
@@ -33,15 +30,16 @@ export const MuiDocument = withEmotionCache(({children, title}: DocumentProps, e
 
   // Only executed on client
   useEnhancedEffect(() => {
-    // re-link sheet container
-    emotionCache.sheet.container = document.head;
-    // re-inject tags
-    const tags = emotionCache.sheet.tags;
-    emotionCache.sheet.flush();
+    const customCache = emotionCache as EmotionCache & { sheet: CustomStyleSheet };
+
+    customCache.sheet.container = document.head;
+
+    const tags = customCache.sheet.tags;
+    customCache.sheet.flush();
     tags.forEach(tag => {
-      (emotionCache.sheet as unknown as CustomStyleSheet)._insertTag(tag);
+      customCache.sheet._insertTag(tag);
     });
-    // reset cache to reapply global styles
+
     clientStyleData.reset();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

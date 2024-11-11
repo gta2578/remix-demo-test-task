@@ -7,8 +7,7 @@ import i18n from '~/localization/i18n';
 
 import {getSupportedLanguageFromRequest, Language} from './resource';
 
-//
-//
+
 
 const i18next = new RemixI18Next({
   detection: {

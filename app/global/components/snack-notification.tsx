@@ -1,8 +1,6 @@
 import React from 'react';
 import {SnackbarContent, CustomContentProps, closeSnackbar} from 'notistack';
-
 import {AlertProps} from '@mui/material';
-
 import {Notification, NotificationProps} from './notification';
 export interface SnackNotificationProps extends NotificationProps {
   noClose?: boolean;

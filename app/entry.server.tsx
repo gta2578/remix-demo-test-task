@@ -66,12 +66,24 @@ const handleBotRequest = (request: Request, responseStatusCode: number, response
           );
           pipe(reactBody);
         },
-        onShellError: (error: unknown) => {
-          reject(error);
+        onShellError: (error: Error | string | any) => {
+          if (error instanceof Error) {
+            reject(error);
+          } else if (typeof error === 'string') {
+            reject(new Error(error));
+          } else {
+            reject(new Error('An unknown error occurred'));
+          }
         },
-        onError: (error: unknown) => {
-          console.error(error);
-          reject(error);
+        onError: (error: Error | string | any) => {
+          if (error instanceof Error) {
+            console.error(error.message);
+          } else if (typeof error === 'string') {
+            console.error(error);
+          } else {
+            console.error('An unknown error occurred');
+          }
+          reject(error instanceof Error ? error : new Error('An unknown error occurred'));
         },
       },
     );
@@ -104,12 +116,24 @@ const handleBrowserRequest = (request: Request, responseStatusCode: number, resp
           );
           pipe(reactBody);
         },
-        onShellError: (error: unknown) => {
-          reject(error);
+        onShellError: (error: Error | string | any) => {
+          if (error instanceof Error) {
+            reject(error);
+          } else if (typeof error === 'string') {
+            reject(new Error(error));
+          } else {
+            reject(new Error('An unknown error occurred'));
+          }
         },
-        onError: (error: unknown) => {
-          console.error(error);
-          reject(error);
+        onError: (error: Error | string | any) => {
+          if (error instanceof Error) {
+            console.error(error.message);
+          } else if (typeof error === 'string') {
+            console.error(error);
+          } else {
+            console.error('An unknown error occurred');
+          }
+          reject(error instanceof Error ? error : new Error('An unknown error occurred'));
         },
       },
     );

@@ -1,6 +1,5 @@
 import {useLocation, useNavigate} from '@remix-run/react'; // eslint-disable-line no-restricted-imports
 import {useTranslation} from 'react-i18next';
-
 import {Language} from '~/localization/resource';
 
 //

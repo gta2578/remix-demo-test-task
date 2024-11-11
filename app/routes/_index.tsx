@@ -1,22 +1,16 @@
 import React from "react";
 import {useTranslation} from 'react-i18next';
 import type {MetaFunction} from '@remix-run/node';
-
 import {Grid2, Typography} from '@mui/material';
-
 import {useQueryProfile} from '~/services/auth';
-
 import {AppLink} from '~/global/components/app-link';
-
 import {ApiResponse, ApiUser} from '~/api-client/types';
 
-//
-//
+
 
 export const meta: MetaFunction = () => [{title: 'Remix App'}];
 
-//
-//
+
 
 export default function Index() {
   const {t} = useTranslation();

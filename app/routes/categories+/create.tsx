@@ -2,26 +2,17 @@ import React from "react";
 import type {MetaFunction} from '@remix-run/node';
 import {Form, redirect} from '@remix-run/react';
 import {yupResolver} from '@hookform/resolvers/yup';
-import {useMutation} from '@tanstack/react-query';
 import {useTranslation} from 'react-i18next';
 import {useSnackbar} from 'notistack';
 import * as yup from 'yup';
 import {useForm, FormProvider} from 'react-hook-form';
-
-import {Box} from '@mui/material';
-
 import {useMutationCategoriesCreate} from '~/services/categories';
-
 import {useI18nNavigate} from '~/global/hooks/use-i18n-navigate';
-
-import {AppInputSwitch} from '~/global/components/app-input-switch';
 import {PageShell} from '~/global/components/page-shell';
-import {AppInput} from '~/global/components/app-input';
-
 import {CategoriesForm} from './components/form';
 
-//
-//
+
+
 
 export const handle = {i18n: ['common', 'categories']};
 export const meta: MetaFunction = () => [{title: 'Remix App - Create a category'}];

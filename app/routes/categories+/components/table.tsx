@@ -1,21 +1,16 @@
 import React from "react";
 import {useTranslation} from 'react-i18next';
 import {useSnackbar} from 'notistack';
-
 import {Paper, Table, TableBody, TableContainer} from '@mui/material';
-
 import {useMutationCategoriesDelete} from '~/services/categories';
-
 import {TableRowEmpty} from '~/global/components/table-row-empty';
-
 import {ApiCategory} from '~/api-client/types';
-
 import {CategoriesTableRow} from './table-row';
 import {CategoriesTableRowSkeleton} from './table-row-skeleton';
 import {CategoriesTableHead} from './table-head';
 
-//
-//
+
+
 
 export const CategoriesTable = ({data, isLoading}: {data?: ApiCategory[]; isLoading: boolean}) => {
   const {t} = useTranslation();

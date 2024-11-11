@@ -1,9 +1,6 @@
 import {InitOptions} from 'i18next';
-
 import {languagesDefault, languagesSupported} from './resource';
 
-//
-//
 
 export default {
   supportedLngs: languagesSupported,

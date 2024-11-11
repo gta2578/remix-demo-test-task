@@ -1,7 +1,6 @@
 import {useLocation} from '@remix-run/react';
 
-//
-//
+
 
 export const useMatchLocation = () => {
   const location = useLocation();

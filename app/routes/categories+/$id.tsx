@@ -6,13 +6,10 @@ import { useMutation } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 import { useSnackbar } from 'notistack';
 import * as yup from 'yup';
-
 import { queryClient } from '~/services/client';
 import { useMutationCategoriesUpdate, useQueryCategoriesGet } from '~/services/categories';
 import { useI18nNavigate } from '~/global/hooks/use-i18n-navigate';
-import { AppInputSwitch } from '~/global/components/app-input-switch';
 import { PageShell } from '~/global/components/page-shell';
-import { AppInput } from '~/global/components/app-input';
 import { CategoriesForm } from './components/form';
 
 //
